@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://byr8m2mi85wfb"]
 
-[ext_resource type="Script" uid="uid://csbw1xfifwxog" path="res://wall.gd" id="1_script"]
+[ext_resource type="Script" path="res://wall.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://behp3fnqk2u5o" path="res://cliff_texture.png" id="2_texture"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wall"]
@@ -8,6 +8,7 @@ size = Vector2(800, 32)
 
 [node name="Wall" type="StaticBody2D" unique_id=1116452425]
 script = ExtResource("1_script")
+size = Vector2(1800, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=924283271]
 shape = SubResource("RectangleShape2D_wall")
