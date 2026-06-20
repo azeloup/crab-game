@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bnuu8mtuwsnfu" path="res://crab.tscn" id="1_crab"]
 [ext_resource type="PackedScene" uid="uid://byr8m2mi85wfb" path="res://wall.tscn" id="2_wall"]
+[ext_resource type="PackedScene" path="res://hazard.tscn" id="3_hazard"]
+[ext_resource type="PackedScene" path="res://respawn_zone.tscn" id="4_respawn"]
 
 [node name="Main" type="Node2D" unique_id=358108906]
 
@@ -26,3 +28,12 @@ scale = Vector2(0.9999999, 0.9999999)
 [node name="Ground5" parent="." unique_id=292874313 instance=ExtResource("2_wall")]
 position = Vector2(1814, 78)
 scale = Vector2(0.99999976, 0.99999976)
+
+[node name="RespawnZone" parent="." unique_id=1419214721 instance=ExtResource("4_respawn")]
+position = Vector2(500, 460)
+
+[node name="Hazard" parent="." unique_id=822246635 instance=ExtResource("3_hazard")]
+position = Vector2(850, 481)
+
+[node name="RespawnZone2" parent="." unique_id=1307018228 instance=ExtResource("4_respawn")]
+position = Vector2(983, 331)

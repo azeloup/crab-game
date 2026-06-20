@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-@export var speed: float = 200.0
+@export var speed: float = 300.0
 @export var jump_velocity: float = -350.0
-@export var wall_climb_speed: float = 150.0
+@export var wall_climb_speed: float = 250.0
 @export var wall_jump_push: float = 250.0
 @export var wall_jump_up: float = 350.0
 @export var rotation_lerp_speed: float = 12.0
@@ -24,6 +24,12 @@ var dash_dir: float = 1.0
 var dash_timer: float = 0.0
 var dash_cd_timer: float = 0.0
 var air_dash_available: bool = true
+var respawn_position: Vector2 = Vector2.ZERO
+
+
+func _ready() -> void:
+	add_to_group("player")
+	respawn_position = global_position
 
 
 func _physics_process(delta: float) -> void:
@@ -159,3 +165,24 @@ func _update_animation() -> void:
 		sprite.play("walk")
 	else:
 		sprite.play("idle")
+
+
+func set_respawn(pos: Vector2) -> void:
+	respawn_position = pos
+
+
+func die() -> void:
+	# Réapparition au dernier point de respawn + remise à zéro de l'état
+	global_position = respawn_position
+	velocity = Vector2.ZERO
+	state = State.NORMAL
+	dash_timer = 0.0
+	dash_cd_timer = 0.0
+	stick_cooldown = 0.0
+	air_dash_available = true
+	sprite.rotation = 0.0
+
+	# Petit clignotement de réapparition
+	sprite.modulate.a = 0.2
+	var tw := create_tween()
+	tw.tween_property(sprite, "modulate:a", 1.0, 0.3)
