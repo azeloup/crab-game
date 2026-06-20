@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://blvh8pftmhxxj"]
+
+[ext_resource type="PackedScene" uid="uid://bnuu8mtuwsnfu" path="res://crab.tscn" id="1_crab"]
+[ext_resource type="PackedScene" uid="uid://byr8m2mi85wfb" path="res://wall.tscn" id="2_wall"]
+
+[node name="Main" type="Node2D" unique_id=358108906]
+
+[node name="Ground" parent="." unique_id=1849160915 instance=ExtResource("2_wall")]
+position = Vector2(412, 406)
+
+[node name="Crab" parent="." unique_id=1840238896 instance=ExtResource("1_crab")]
+position = Vector2(400, 300)
+
+[node name="Ground2" parent="." unique_id=1116452425 instance=ExtResource("2_wall")]
+position = Vector2(829, 22)
+rotation = -1.5707964
