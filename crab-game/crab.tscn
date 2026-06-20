@@ -54,15 +54,44 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crab"]
 size = Vector2(28, 24)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wad7g"]
+size = Vector2(9.5, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_14etv"]
+size = Vector2(9, 6.5)
+
 [node name="Crab" type="CharacterBody2D" unique_id=1092594394]
 position = Vector2(0, -21)
 script = ExtResource("2_script")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=340804202]
+position = Vector2(0, 22)
 scale = Vector2(2, 2)
+offset = Vector2(0, -11)
 sprite_frames = SubResource("SpriteFrames_crab")
 animation = &"idle"
+frame_progress = 0.23545086
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=927285620]
 position = Vector2(0, 21)
 shape = SubResource("RectangleShape2D_crab")
+
+[node name="LeftLeg" type="Area2D" parent="." unique_id=1995872387]
+position = Vector2(9.75, 30)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftLeg" unique_id=192694144]
+shape = SubResource("RectangleShape2D_wad7g")
+
+[node name="RightLeg" type="Area2D" parent="." unique_id=1898058021]
+position = Vector2(-9.5, 30.25)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightLeg" unique_id=1297630381]
+shape = SubResource("RectangleShape2D_14etv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 21)
+position_smoothing_enabled = true

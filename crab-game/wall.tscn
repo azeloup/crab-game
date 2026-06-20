@@ -7,6 +7,7 @@
 size = Vector2(800, 32)
 
 [node name="Wall" type="StaticBody2D" unique_id=1116452425]
+collision_layer = 3
 script = ExtResource("1_script")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=924283271]

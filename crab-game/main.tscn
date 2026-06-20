@@ -6,11 +6,23 @@
 [node name="Main" type="Node2D" unique_id=358108906]
 
 [node name="Ground" parent="." unique_id=1849160915 instance=ExtResource("2_wall")]
-position = Vector2(412, 406)
+position = Vector2(602, 513)
 
 [node name="Crab" parent="." unique_id=1840238896 instance=ExtResource("1_crab")]
 position = Vector2(400, 300)
 
 [node name="Ground2" parent="." unique_id=1116452425 instance=ExtResource("2_wall")]
-position = Vector2(829, 22)
-rotation = -1.5707964
+position = Vector2(1165, 228)
+rotation = -0.81332344
+
+[node name="Ground3" parent="." unique_id=2035897328 instance=ExtResource("2_wall")]
+position = Vector2(221, 149)
+rotation = 1.5707964
+
+[node name="Ground4" parent="." unique_id=1859404081 instance=ExtResource("2_wall")]
+position = Vector2(614, -297)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="Ground5" parent="." unique_id=292874313 instance=ExtResource("2_wall")]
+position = Vector2(1814, 78)
+scale = Vector2(0.99999976, 0.99999976)
