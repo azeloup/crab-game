@@ -23,8 +23,17 @@ func go_to_scene(scene: PackedScene) -> void:
 
 
 func go_to_path(path: String) -> void:
+	# load() accepte aussi bien "res://..." que "uid://..." (l'éditeur stocke des uid)
+	var packed := load(path) as PackedScene
+	if packed == null:
+		push_error("Levels: niveau introuvable -> " + path)
+		return
 	current_scene_path = path
-	get_tree().change_scene_to_file(path)
+	_change_deferred.call_deferred(packed, path)
+
+
+func _change_deferred(packed: PackedScene, path: String) -> void:
+	get_tree().change_scene_to_packed(packed)
 	level_changed.emit(path)
 
 

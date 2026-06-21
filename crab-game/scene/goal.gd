@@ -4,12 +4,12 @@ extends Area2D
 	set(value):
 		size = value
 		_apply_size()
-@export var color: Color = Color(1, 0.85, 0.1, 0.7):
+@export var color: Color = Color(0.0, 0.0, 0.0, 0.0):
 	set(value):
 		color = value
 		if is_node_ready():
 			polygon.color = value
-@export var next_level: PackedScene 
+@export_file("*.tscn") var next_level: String = ""
 
 @onready var collision: CollisionShape2D = $CollisionShape2D
 @onready var polygon: Polygon2D = $Polygon2D
@@ -38,7 +38,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if _done or not body.is_in_group("player"):
 		return
 	_done = true
-	if next_level != null:
-		Levels.go_to_scene(next_level)
+	if next_level != "":
+		Levels.go_to_path(next_level)
 	else:
 		print("Place holder pour la fin")

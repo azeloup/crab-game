@@ -18,11 +18,20 @@ extends Area2D
 @onready var polygon: Polygon2D = $Polygon2D
 
 var _time_in: Dictionary = {}
+var _start_position: Vector2 = Vector2.ZERO
 
 
 func _ready() -> void:
 	_apply_size()
 	polygon.color = color
+	add_to_group("water")
+	_start_position = position
+
+
+func reset() -> void:
+	# Remet l'eau à son niveau de départ
+	position = _start_position
+	_time_in.clear()
 
 
 func _apply_size() -> void:

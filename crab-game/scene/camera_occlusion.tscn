@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://cwdybqnna7ff0"]
+[gd_scene format=3 uid="uid://d6ijnpf1fo7c"]
 
-[ext_resource type="Script" uid="uid://bjl8llf5v1lvw" path="res://camera_occlusion.gd" id="1_occ"]
-[ext_resource type="Shader" uid="uid://bufrcpuvqmqif" path="res://occlusion.gdshader" id="2_shader"]
+[ext_resource type="Script" path="res://scene/camera_occlusion.gd" id="1_occ"]
+[ext_resource type="Shader" path="res://scene/occlusion.gdshader" id="2_shader"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_occ"]
 shader = ExtResource("2_shader")

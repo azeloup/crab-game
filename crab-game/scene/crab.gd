@@ -204,6 +204,11 @@ func die() -> void:
 	air_dash_available = true
 	sprite.rotation = 0.0
 
+	# Reset de l'eau qui monte
+	for w in get_tree().get_nodes_in_group("water"):
+		if w.has_method("reset"):
+			w.reset()
+
 	sprite.modulate.a = 0.2
 	var tw := create_tween()
 	tw.tween_property(sprite, "modulate:a", 1.0, 0.3)
