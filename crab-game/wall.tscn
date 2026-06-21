@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dsi3rcack8frj"]
+[gd_scene format=3 uid="uid://cjlkk1uk53sov"]
 
 [ext_resource type="Script" path="res://wall.gd" id="1_script"]
 [ext_resource type="Texture2D" path="res://cliff_texture.png" id="2_texture"]

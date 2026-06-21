@@ -1,7 +1,11 @@
-[gd_scene format=3 uid="uid://byr8m2mi85wfb"]
+[gd_scene format=3 uid="uid://dsi3rcack8frj"]
 
 [ext_resource type="Script" path="res://wall.gd" id="1_script"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://behp3fnqk2u5o" path="res://cliff_texture.png" id="2_texture"]
+=======
+[ext_resource type="Texture2D" path="res://cliff_texture.png" id="2_texture"]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wall"]
 size = Vector2(800, 32)

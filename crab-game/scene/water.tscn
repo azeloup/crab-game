@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cn72gkqnk5i7k"]
+
+[ext_resource type="Script" uid="uid://ga22ron58e8o" path="res://water.gd" id="1_water"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_water"]
+size = Vector2(6000, 4000)
+
+[node name="Water" type="Area2D" unique_id=1076199165]
+collision_layer = 0
+script = ExtResource("1_water")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=843450308]
+color = Color(0.2, 0.5, 0.9, 0.45)
+polygon = PackedVector2Array(-3000, -2000, 3000, -2000, 3000, 2000, -3000, 2000)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1120415423]
+shape = SubResource("RectangleShape2D_water")
