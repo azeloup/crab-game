@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b78xnwyhxnkjf"
-path="res://.godot/imported/summer_.png-0cfa5e72f025771723d30cb84f28d922.ctex"
+path="res://.godot/imported/summer_.png-a5bc96fdffe314de03582ebdf0df02dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://summer_.png"
-dest_files=["res://.godot/imported/summer_.png-0cfa5e72f025771723d30cb84f28d922.ctex"]
+source_file="res://assets/summer_.png"
+dest_files=["res://.godot/imported/summer_.png-a5bc96fdffe314de03582ebdf0df02dd.ctex"]
 
 [params]
 

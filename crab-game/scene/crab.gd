@@ -11,10 +11,10 @@ extends CharacterBody2D
 @export var dash_duration: float = 0.15
 @export var dash_cooldown: float = 0.4
 @export var dash_ghost_fade: float = 0.3
-@export var water_gravity_scale: float = 0.25  # gravité réduite sous l'eau (flottaison)
-@export var water_drag: float = 4.0            # résistance de l'eau (amortissement)
-@export var water_speed: float = 160.0         # vitesse de nage horizontale
-@export var swim_impulse: float = -260.0       # impulsion de nage vers le haut (saut)
+@export var water_gravity_scale: float = 0.25 
+@export var water_drag: float = 4.0
+@export var water_speed: float = 160.0
+@export var swim_impulse: float = -260.0
 
 enum State { NORMAL, WALL_STICK, DASH }
 
@@ -29,7 +29,7 @@ var dash_timer: float = 0.0
 var dash_cd_timer: float = 0.0
 var air_dash_available: bool = true
 var respawn_position: Vector2 = Vector2.ZERO
-var _last_water_frame: int = -10   # dernière frame physique signalée "dans l'eau"
+var _last_water_frame: int = -10
 
 
 func _ready() -> void:
