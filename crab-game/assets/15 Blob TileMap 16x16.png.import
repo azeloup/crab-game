@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxk1t5muei0vb"
-path="res://.godot/imported/15 Blob TileMap 16x16.png-de968a98ff0fa1885c59e21e4c0095ff.ctex"
+path="res://.godot/imported/15 Blob TileMap 16x16.png-af8597d8d9b49bd93c8e3955f3b43631.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://15 Blob TileMap 16x16.png"
-dest_files=["res://.godot/imported/15 Blob TileMap 16x16.png-de968a98ff0fa1885c59e21e4c0095ff.ctex"]
+source_file="res://assets/15 Blob TileMap 16x16.png"
+dest_files=["res://.godot/imported/15 Blob TileMap 16x16.png-af8597d8d9b49bd93c8e3955f3b43631.ctex"]
 
 [params]
 

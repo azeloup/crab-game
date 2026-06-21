@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxn7f58cua67w"
-path="res://.godot/imported/Crab Sprite Sheet.png-a86bffbf4d12916663370a4e6fb845fb.ctex"
+uid="uid://b78bv2olrtanl"
+path="res://.godot/imported/sea3.png-4e2aad57cbeb3a966d8de790b5901fbe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Crab Sprite Sheet.png"
-dest_files=["res://.godot/imported/Crab Sprite Sheet.png-a86bffbf4d12916663370a4e6fb845fb.ctex"]
+source_file="res://assets/layers/sea3.png"
+dest_files=["res://.godot/imported/sea3.png-4e2aad57cbeb3a966d8de790b5901fbe.ctex"]
 
 [params]
 
