@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://byr8m2mi85wfb" path="res://scene/wall.tscn" id="3_405lq"]
 [ext_resource type="PackedScene" uid="uid://b1tfgldn2apf" path="res://goal.tscn" id="4_vdstc"]
 [ext_resource type="PackedScene" uid="uid://blvh8pftmhxxj" path="res://scene/main.tscn" id="5_22o2k"]
+[ext_resource type="PackedScene" path="res://camera_occlusion.tscn" id="6_22o2k"]
 
 [node name="Node2D" type="Node2D" unique_id=268177616]
 
@@ -37,3 +38,5 @@ rotation = 1.5707964
 
 [node name="Goal" parent="." unique_id=38923267 instance=ExtResource("4_vdstc")]
 next_level = ExtResource("5_22o2k")
+
+[node name="CameraOcclusion" parent="." unique_id=1678452292 instance=ExtResource("6_22o2k")]

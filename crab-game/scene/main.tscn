@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" path="res://scene/hazard.tscn" id="6_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://b1tfgldn2apf" path="res://goal.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://dv2wjf5ao56dr" path="res://scene/lvl.tscn" id="7_lvl"]
+[ext_resource type="PackedScene" path="res://camera_occlusion.tscn" id="8_occ"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lquwl"]
 texture = ExtResource("4_1bvp3")
@@ -310,3 +311,5 @@ next_level = ExtResource("7_lvl")
 
 [node name="Hazard" parent="." unique_id=1764470870 instance=ExtResource("6_4j5ol")]
 position = Vector2(873, 416)
+
+[node name="CameraOcclusion" parent="." unique_id=1460966209 instance=ExtResource("8_occ")]
