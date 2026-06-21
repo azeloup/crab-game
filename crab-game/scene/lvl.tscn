@@ -853,9 +853,14 @@ sources/0 = SubResource("TileSetAtlasSource_k0o5b")
 [node name="Node" type="Node" unique_id=1019509056]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1482294713]
+texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -556.0
+offset_top = -261.0
+offset_right = 541.0
+offset_bottom = 268.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_xliyy")
