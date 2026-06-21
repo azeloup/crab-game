@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://chxwufo31up66" path="res://assets/layers/land2.png" id="4_7oe86"]
 [ext_resource type="Texture2D" uid="uid://bxk1t5muei0vb" path="res://assets/15 Blob TileMap 16x16.png" id="5_r8u3h"]
 [ext_resource type="PackedScene" uid="uid://bnuu8mtuwsnfu" path="res://scene/crab.tscn" id="6_qwgno"]
+[ext_resource type="PackedScene" path="res://scene/camera_occlusion.tscn" id="7_v232d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k0o5b"]
 texture = ExtResource("5_r8u3h")
@@ -854,6 +855,8 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_k0o5b")
 
 [node name="Node" type="Node" unique_id=1019509056]
+
+[node name="CameraOcclusion" parent="." unique_id=115152778 instance=ExtResource("7_v232d")]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=561279787]
 
