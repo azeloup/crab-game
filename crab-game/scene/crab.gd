@@ -14,7 +14,6 @@ extends CharacterBody2D
 @export var water_gravity_scale: float = 0.25 
 @export var water_drag: float = 4.0
 @export var water_speed: float = 160.0
-@export var swim_impulse: float = -260.0
 
 enum State { NORMAL, WALL_STICK, DASH }
 
@@ -176,7 +175,6 @@ func _update_animation() -> void:
 
 
 func notify_in_water() -> void:
-	# Appelé chaque frame par l'eau tant que le crabe est immergé
 	_last_water_frame = Engine.get_physics_frames()
 
 
@@ -185,12 +183,8 @@ func _is_in_water() -> bool:
 
 
 func _apply_water_physics(direction: float, delta: float) -> void:
-	# Gravité réduite : le crabe coule lentement (poussée d'Archimède)
 	velocity.y += get_gravity().y * water_gravity_scale * delta
-	# Nage : impulsion vers le haut à chaque appui sur saut (illimité dans l'eau)
-	if Input.is_action_just_pressed("jump"):
-		velocity.y = swim_impulse
-	# Résistance de l'eau : amortissement (indépendant du framerate)
+
 	var damp := 1.0 - exp(-water_drag * delta)
 	velocity.y = lerp(velocity.y, 0.0, damp)
 	velocity.x = lerp(velocity.x, direction * water_speed, damp)

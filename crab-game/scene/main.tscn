@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://blvh8pftmhxxj"]
 
-[ext_resource type="PackedScene" uid="uid://bnuu8mtuwsnfu" path="res://crab.tscn" id="1_crab"]
-[ext_resource type="PackedScene" uid="uid://byr8m2mi85wfb" path="res://wall.tscn" id="2_wall"]
-[ext_resource type="PackedScene" path="res://hazard.tscn" id="3_hazard"]
-[ext_resource type="Texture2D" uid="uid://b78xnwyhxnkjf" path="res://summer_.png" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bnuu8mtuwsnfu" path="res://scene/crab.tscn" id="1_crab"]
+[ext_resource type="PackedScene" uid="uid://byr8m2mi85wfb" path="res://scene/wall.tscn" id="2_wall"]
+[ext_resource type="Texture2D" uid="uid://b78xnwyhxnkjf" path="res://assets/summer_.png" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cn72gkqnk5i7k" path="res://water.tscn" id="5_water"]
-[ext_resource type="PackedScene" path="res://goal.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" path="res://scene/hazard.tscn" id="6_4j5ol"]
+[ext_resource type="PackedScene" uid="uid://b1tfgldn2apf" path="res://goal.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://dv2wjf5ao56dr" path="res://scene/lvl.tscn" id="7_lvl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lquwl"]
 texture = ExtResource("4_1bvp3")
@@ -291,9 +292,6 @@ position = Vector2(401, 409)
 [node name="Crab" parent="." unique_id=1840238896 instance=ExtResource("1_crab")]
 position = Vector2(400, 300)
 
-[node name="Hazard" parent="." unique_id=822246635 instance=ExtResource("3_hazard")]
-position = Vector2(850, 481)
-
 [node name="Ground2" parent="." unique_id=1116452425 instance=ExtResource("2_wall")]
 position = Vector2(1000.99994, 60.999985)
 rotation = 1.6179202
@@ -308,3 +306,7 @@ max_level_y = 200.0
 
 [node name="Goal" parent="." unique_id=420380536 instance=ExtResource("6_7mycd")]
 position = Vector2(973, -303)
+next_level = ExtResource("7_lvl")
+
+[node name="Hazard" parent="." unique_id=1764470870 instance=ExtResource("6_4j5ol")]
+position = Vector2(873, 416)

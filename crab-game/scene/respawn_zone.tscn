@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://respawn_zone.gd" id="1_respawn"]
+[ext_resource type="Script" path="res://scene/respawn_zone.gd" id="1_respawn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_respawn"]
 size = Vector2(48, 64)

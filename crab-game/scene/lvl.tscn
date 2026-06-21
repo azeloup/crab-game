@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://dv2wjf5ao56dr"]
 
-[ext_resource type="Texture2D" uid="uid://c4lwbh14q5165" path="res://background.jpg" id="1_xliyy"]
-[ext_resource type="PackedScene" uid="uid://bnuu8mtuwsnfu" path="res://crab.tscn" id="2_4iw1c"]
-[ext_resource type="Texture2D" uid="uid://bxk1t5muei0vb" path="res://15 Blob TileMap 16x16.png" id="2_hx1ia"]
+[ext_resource type="Texture2D" uid="uid://c4lwbh14q5165" path="res://assets/background.jpg" id="1_xliyy"]
+[ext_resource type="PackedScene" uid="uid://bnuu8mtuwsnfu" path="res://scene/crab.tscn" id="2_4iw1c"]
+[ext_resource type="Texture2D" uid="uid://bxk1t5muei0vb" path="res://assets/15 Blob TileMap 16x16.png" id="2_hx1ia"]
+[ext_resource type="PackedScene" uid="uid://b1tfgldn2apf" path="res://goal.tscn" id="4_5o85o"]
+[ext_resource type="PackedScene" uid="uid://bxub4vlwpgfwf" path="res://scene/levl_1.tscn" id="5_jj0b5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k0o5b"]
 texture = ExtResource("2_hx1ia")
@@ -872,3 +874,7 @@ layer_0/tile_data = PackedInt32Array(2293768, 1441792, 3, 2293769, 1507328, 3, 2
 
 [node name="Crab" parent="." unique_id=1092594394 instance=ExtResource("2_4iw1c")]
 position = Vector2(22, 574)
+
+[node name="Goal" parent="." unique_id=38923267 instance=ExtResource("4_5o85o")]
+position = Vector2(953, 99)
+next_level = ExtResource("5_jj0b5")
