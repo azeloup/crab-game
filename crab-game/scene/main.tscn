@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://blvh8pftmhxxj"]
 
 [ext_resource type="PackedScene" uid="uid://bnuu8mtuwsnfu" path="res://scene/crab.tscn" id="1_crab"]
-[ext_resource type="PackedScene" uid="uid://byr8m2mi85wfb" path="res://scene/wall.tscn" id="2_wall"]
+[ext_resource type="PackedScene" uid="uid://dsi3rcack8frj" path="res://scene/wall.tscn" id="2_wall"]
 [ext_resource type="Texture2D" uid="uid://b78xnwyhxnkjf" path="res://assets/summer_.png" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cn72gkqnk5i7k" path="res://water.tscn" id="5_water"]
 [ext_resource type="PackedScene" path="res://scene/hazard.tscn" id="6_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://b1tfgldn2apf" path="res://goal.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://dv2wjf5ao56dr" path="res://scene/lvl.tscn" id="7_lvl"]
-[ext_resource type="PackedScene" path="res://camera_occlusion.tscn" id="8_occ"]
+[ext_resource type="PackedScene" uid="uid://cwdybqnna7ff0" path="res://camera_occlusion.tscn" id="8_occ"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lquwl"]
 texture = ExtResource("4_1bvp3")
