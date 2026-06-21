@@ -195,7 +195,6 @@ func set_respawn(pos: Vector2) -> void:
 
 
 func die() -> void:
-	# Réapparition au dernier point de respawn + remise à zéro de l'état
 	global_position = respawn_position
 	velocity = Vector2.ZERO
 	state = State.NORMAL
@@ -205,7 +204,6 @@ func die() -> void:
 	air_dash_available = true
 	sprite.rotation = 0.0
 
-	# Petit clignotement de réapparition
 	sprite.modulate.a = 0.2
 	var tw := create_tween()
 	tw.tween_property(sprite, "modulate:a", 1.0, 0.3)

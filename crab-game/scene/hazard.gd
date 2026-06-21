@@ -1,7 +1,5 @@
 extends Area2D
 
-## Obstacle mortel : tue tout corps du groupe "player" qui le touche.
-
 @export var size: Vector2 = Vector2(64, 32):
 	set(value):
 		size = value
