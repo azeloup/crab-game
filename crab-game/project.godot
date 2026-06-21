@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="crab-game"
-run/main_scene="res://main.tscn"
+run/main_scene="uid://blvh8pftmhxxj"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Levels="*res://level_manager.gd"
 
 [input]
 

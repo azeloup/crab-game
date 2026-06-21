@@ -1,5 +1,11 @@
 [gd_scene format=3 uid="uid://dv2wjf5ao56dr"]
 
+[ext_resource type="Texture2D" uid="uid://c4lwbh14q5165" path="res://assets/background.jpg" id="1_xliyy"]
+[ext_resource type="PackedScene" uid="uid://bnuu8mtuwsnfu" path="res://scene/crab.tscn" id="2_4iw1c"]
+[ext_resource type="Texture2D" uid="uid://bxk1t5muei0vb" path="res://assets/15 Blob TileMap 16x16.png" id="2_hx1ia"]
+[ext_resource type="PackedScene" uid="uid://b1tfgldn2apf" path="res://goal.tscn" id="4_5o85o"]
+[ext_resource type="PackedScene" uid="uid://bxub4vlwpgfwf" path="res://scene/levl_1.tscn" id="5_jj0b5"]
+[ext_resource type="PackedScene" path="res://camera_occlusion.tscn" id="6_y4u66"]
 [ext_resource type="Texture2D" uid="uid://gi3ce87eyexn" path="res://assets/layers/sky.png" id="1_jj0b5"]
 [ext_resource type="PackedScene" uid="uid://bnuu8mtuwsnfu" path="res://scene/crab.tscn" id="2_4iw1c"]
 [ext_resource type="Texture2D" uid="uid://bxk1t5muei0vb" path="res://assets/15 Blob TileMap 16x16.png" id="2_hx1ia"]
@@ -855,6 +861,18 @@ sources/0 = SubResource("TileSetAtlasSource_k0o5b")
 
 [node name="Node" type="Node" unique_id=1019509056]
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1482294713]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -299.0
+offset_top = -278.0
+offset_right = 798.0
+offset_bottom = 251.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xliyy")
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=561279787]
 
 [node name="Layer 1" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1879985590]
@@ -898,3 +916,9 @@ layer_0/tile_data = PackedInt32Array(2293768, 1441792, 3, 2293769, 1507328, 3, 2
 
 [node name="Crab" parent="." unique_id=1092594394 instance=ExtResource("2_4iw1c")]
 position = Vector2(22, 574)
+
+[node name="Goal" parent="." unique_id=38923267 instance=ExtResource("4_5o85o")]
+position = Vector2(953, 99)
+next_level = ExtResource("5_jj0b5")
+
+[node name="CameraOcclusion" parent="." unique_id=520090403 instance=ExtResource("6_y4u66")]

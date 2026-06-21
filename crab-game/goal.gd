@@ -1,16 +1,25 @@
 extends Area2D
 
-@export var size: Vector2 = Vector2(64, 32):
+@export var size: Vector2 = Vector2(48, 64):
 	set(value):
 		size = value
 		_apply_size()
+@export var color: Color = Color(1, 0.85, 0.1, 0.7):
+	set(value):
+		color = value
+		if is_node_ready():
+			polygon.color = value
+@export var next_level: PackedScene 
 
 @onready var collision: CollisionShape2D = $CollisionShape2D
 @onready var polygon: Polygon2D = $Polygon2D
 
+var _done := false
+
 
 func _ready() -> void:
 	_apply_size()
+	polygon.color = color
 	body_entered.connect(_on_body_entered)
 
 
@@ -26,5 +35,10 @@ func _apply_size() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player") and body.has_method("die"):
-		body.die()
+	if _done or not body.is_in_group("player"):
+		return
+	_done = true
+	if next_level != null:
+		Levels.go_to_scene(next_level)
+	else:
+		print("Place holder pour la fin")
